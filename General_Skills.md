@@ -94,3 +94,48 @@ cvpbPGS{arkg_gvzr_V'yy_gel_2_ebhaqf_bs_ebg13_uJdSftmh}
 picoCTF{next_time_I'll_try_2_rounds_of_rot13_hWqFsgzu}
 ```
 
+&nbsp;
+
+### Static ain't always noise
+
+Download the Static and BASH Script files with wget command:
+```console
+~$ wget https://mercury.picoctf.net/static/e9dd71b5d11023873b8abe99cdb45551/ltdis.sh
+~$ wget https://mercury.picoctf.net/static/e9dd71b5d11023873b8abe99cdb45551/static
+```
+Make the BASH script an executable using chmod, then run the script with the static file as input
+```console
+~$ chmod +x ltdis.sh
+~$ ./ltdis.sh static
+```
+Output of script will be saved to a file called "static.ltdis.strings.txt". Contents of txt file are:
+```console
+    238 /lib64/ld-linux-x86-64.so.2
+    361 libc.so.6
+    36b puts
+    370 __cxa_finalize
+    37f __libc_start_main
+    391 GLIBC_2.2.5
+    39d _ITM_deregisterTMCloneTable
+    3b9 __gmon_start__
+    3c8 _ITM_registerTMCloneTable
+    660 AWAVI
+    667 AUATL
+    6ba []A\A]A^A_
+    6e8 Oh hai! Wait what? A flag? Yes, it's around here somewhere!
+    7c7 ;*3$"
+    ...
+ ```
+ Use the grep command to locate the line in the txt file that contains "pico", then use awk command to only output the 2nd column of the line:
+ ```console
+ ~$ cat static.ltdis.strings.txt | grep pico | awk '{print $2}'
+ ```
+  ```console
+picoCTF{d15a5m_t34s3r_ae0b3ef2}
+ ```
+ 
+ 
+
+
+
+
