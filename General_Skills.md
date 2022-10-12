@@ -81,4 +81,15 @@ The decimal values above converted to ASCII will be:
 picoCTF{g00d_k1tty!_n1c3_k1tty!_3d84edc8}
 ```
 
+&nbsp;
+
+### Mod 26
+
+Copy and paste the given value into a Rot13 converter.\Rot13 is a variation of the Ceaser Cipher which has a key of 13.
+```console
+cvpbPGS{arkg_gvzr_V'yy_gel_2_ebhaqf_bs_ebg13_uJdSftmh}
+```
+```console
+picoCTF{next_time_I'll_try_2_rounds_of_rot13_hWqFsgzu}
+```
 
