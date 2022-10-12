@@ -63,3 +63,22 @@ To run an executable from any other directory, it must be specified. You can vie
 ```console
 ~$ echo $PATH | tr ':' '\n'
 ```
+
+&nbsp;
+
+### Nice netcat
+
+Copy and paste the netcat command, which establishes a connection with the domain and port:
+```console
+~$ nc mercury.picoctf.net 49039
+```
+The output will display decimal numbers that can be converted to ASCII by copy-pasting values into an online decimal-ascii converter
+```console
+112  105  99  111  67  84  70  123  103  48  48  100  95  107  49  116  116  121  33  95  110  49  99  51  95  107  49  116  116  121  33  95  51  100  56  52  101  100  99  56  125  10
+```
+The decimal values above converted to ASCII will be:
+```console
+picoCTF{g00d_k1tty!_n1c3_k1tty!_3d84edc8}
+```
+
+
