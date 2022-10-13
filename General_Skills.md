@@ -1,4 +1,4 @@
-### Obedient Cat
+## Obedient Cat
 
 Download the flag file link using “wget” command:
 ```console
@@ -12,7 +12,7 @@ picoCTF{s4n1ty_v3r1f13d_4a2b35fd}
 
 &nbsp;
 
-### Python Wrangling
+## Python Wrangling
 
 Download the Python script, password file, and encrypted flag file using “wget” command:
 ```console
@@ -33,7 +33,7 @@ picoCTF{4p0110_1n_7h3_h0us3_68f88f93}
 ```
 &nbsp;
 
-### Wave a flag
+## Wave a flag
 
 Download the provided program
 ```console
@@ -66,7 +66,7 @@ To run an executable from any other directory, it must be specified. You can vie
 
 &nbsp;
 
-### Nice netcat
+## Nice netcat
 
 Copy and paste the netcat command, which establishes a connection with the domain and port:
 ```console
@@ -83,7 +83,7 @@ picoCTF{g00d_k1tty!_n1c3_k1tty!_3d84edc8}
 
 &nbsp;
 
-### Mod 26
+## Mod 26
 
 Copy and paste the given value into a Rot13 converter.\
 Rot13 is a variation of the Ceaser Cipher which has a key of 13.
@@ -96,7 +96,7 @@ picoCTF{next_time_I'll_try_2_rounds_of_rot13_hWqFsgzu}
 
 &nbsp;
 
-### Static ain't always noise
+## Static ain't always noise
 
 Download the Static and BASH Script files with wget command:
 ```console
@@ -136,7 +136,7 @@ picoCTF{d15a5m_t34s3r_ae0b3ef2}
  
  &nbsp;
 
-### What's a net cat (netcat)
+## What's a net cat (netcat)
 
 Use the netcat (nc) command to initiate TCP connection to server on port 25104
 
@@ -153,7 +153,7 @@ Netcat functions include:
 
  &nbsp;
 
-### Strings It 
+## Strings It 
 
 The "strings" command will locate and print strings that are embedded within binary files such as executables (without executing the file).
 Software developers will package the binary file and add additional ASCII text to help users understand more about the executable file.
@@ -163,7 +163,7 @@ Software developers will package the binary file and add additional ASCII text t
 
 &nbsp;
 
-### Bases (Base64)
+## Bases (Base64)
 
 Base64 encoded text characteristics:
 - lenth of text is a multiple of 4 (e.g., 4, 8, 12, ... 20)
@@ -181,3 +181,36 @@ or
 ~$ base64 -d myfile.txt
 ```
 
+&nbsp;
+
+## md5sum (MD5 checksum verification)
+
+MD5 is an symmetric encyrption algorithm used to create a hash of a file or text to ensure integrity of file after transit or download. 
+
+Use the following command to create an MD5 hash of a string "hello123":
+- -n flag is used to omit a newline character which is added by default with the "echo" command
+```console 
+~$ echo -n "hello123" | md5sum
+
+f30aa7a662c728b7407c54ae6bfd27d1
+``` 
+
+Produce MD5 hash of a file:
+```console
+~$ md5sum myfile.txt
+
+d41d8cd98f00b204e9800998ecf8427e  myfile.txt
+```
+Create a file containing MD5 hash of multiple files:
+```console
+~$ md5sum example1.txt example2.txt example3.txt > hashfile
+```
+Check to see if hashes of current files match those in hashfile (Text in example2.txt has been changed):
+```console
+~$ md5sum -c hashfile
+
+example1.txt: OK
+example2.txt: FAILED
+example3.txt: OK
+md5sum: WARNING: 1 computed checksum did NOT match
+```
