@@ -134,8 +134,50 @@ Output of script will be saved to a file called "static.ltdis.strings.txt". Cont
 picoCTF{d15a5m_t34s3r_ae0b3ef2}
  ```
  
- 
+ &nbsp;
 
+### What's a net cat (netcat)
 
+Use the netcat (nc) command to initiate TCP connection to server on port 25104
 
+```console
+~$ nc jupiter.challenges.picoctf.org 25103
+
+You're on your way to becoming the net cat master
+picoCTF{nEtCat_Mast3ry_d0c64587}
+```
+Netcat functions include:
+- inbound / outbound TCP/UDP connections
+- port scanning
+- establishing backdoors
+
+ &nbsp;
+
+### Strings It 
+
+The "strings" command will locate and print strings that are embedded within binary files such as executables (without executing the file).
+Software developers will package the binary file and add additional ASCII text to help users understand more about the executable file.
+```console
+~$ strings myfile
+```
+
+&nbsp;
+
+### Bases (Base64)
+
+Base64 encoded text characteristics:
+- lenth of text is a multiple of 4 (e.g., 4, 8, 12, ... 20)
+- padded with 0, 1, or 2 "=" (equal) characters
+
+Use base64 command to encode or decode base64 strings. 
+- -d to decode
+- -e to encode
+
+```console
+~$ echo bDNhcm5fdGgzX3IwcDM1 | base64 -d
+```
+or 
+```console
+~$ base64 -d myfile.txt
+```
 
